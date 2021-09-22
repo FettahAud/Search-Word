@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+:root {
+	--primary-color: #222f3e;
+	--secondary-color: #f5f6fa;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Nunito, sans-serif;
+	outline: none;
+}
+*:focus {
+	outline: none;
+}
+body {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: var(--secondary-color);
+	&::before {
+		content: "";
+		width: 50%;
+		height: 100%;
+		background-color: var(--primary-color);
+		position: absolute;
+		z-index: -1;
+	}
+}
+.cont {
+	width: 600px;
+	height: 350px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	padding: 2rem 3rem;
+	.head {
+		display: flex;
+		justify-content: space-between;
+		margin: 0rem 0 1.4rem;
+		input {
+			width: 290px;
+			padding: 0.5rem 1rem;
+		}
+		button {
+			cursor: pointer;
+			padding: 0.6rem 3rem;
+			border: none;
+			outline: none;
+			background-color: var(--primary-color);
+			color: white;
+		}
+	}
+	p {
+		line-height: 1.8rem;
+		text-align: justify;
+		letter-spacing: 0.02rem;
+	}
+}
+.highlight {
+	color: white;
+	position: relative;
+	z-index: 2;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 120%;
+		height: 90%;
+		background-color: var(--primary-color);
+		bottom: 0px;
+		top: 0;
+		right: 50%;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		z-index: -1;
+	}
+}
